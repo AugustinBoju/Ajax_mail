@@ -16,11 +16,10 @@ Things you may want to cover:
 * Database initialization
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 * AJAX_GMAIL
+
+Git clone 
+bundle install
+rails db:reset
+rails s
+and create account on Localhost 3000 
