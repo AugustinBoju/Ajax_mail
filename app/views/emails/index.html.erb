@@ -1,0 +1,30 @@
+<h1 class="text-center mb-4">Gmail</h1>
+<div class="container">
+
+<div class="col-md-3 offset-4 mb-5 mt-5">
+<%= button_to 'New email', emails_path, class: "btn btn-primary btn-lg", remote: true%>
+</div>
+
+  <div class="row">
+    <div class="col-md-4 border-right">
+      <h3 class="text-center mb-4 text-danger">Mailbox</h3>
+      <ul id="email-list">
+
+        <% @emails.each do |email|%>
+          <li id="email-<%= email.id %>" class="<%= email.read ? "" : "font-weight-bold" %>">
+
+           <%= link_to "#{email.object}", email_path(email.id), class: "text-dark",remote: true%>
+            <hr>
+          </li>
+        <%end%>
+
+      </ul>
+    </div>
+
+    <div class="col-md-8 pt-5">
+        <div id="mail-show">
+          <div class="child">
+          </div>
+        </div>
+    </div>
+  </div>

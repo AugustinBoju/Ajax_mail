@@ -1,0 +1,15 @@
+ <div class="child">
+        <h3 class="font-weight-bold"> <%= "Subject : #{@email.object}" %> </h3>
+        <div class="m-3">
+                <%= @email.body%>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+                          <%= button_to "Delete", email_path(@email.id), method:"delete", class: "btn btn-sm btn-danger m-3", remote: true %>
+                </div>
+
+                <div class="col-md-8">
+                        <%= link_to "Mark as read/unread", email_path(@email.id), method: "put", class: "btn btn-sm btn-primary m-3 ", remote: true %>
+                </div>
+        </div>
+</div>

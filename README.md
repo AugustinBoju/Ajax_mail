@@ -22,5 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# Ajax_mail
-# Ajax_mail
+
+* AJAX_GMAIL
